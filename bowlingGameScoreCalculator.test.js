@@ -17,8 +17,20 @@ describe('Bowling Game Score Calculator', ()=>{
         const result = getBowlingScore([3,6,3,6,3,6,3,6,3,6,3,6,3,6,3,6,3,6,3,6])
         expect(result).toBe(90)
     })
+
     it('Should return final score when 10 frames are given as input (no strikes or spares)',()=>{
         const result = getBowlingScore([6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
         expect(result).toBe(16)
     })
+
+    it('Should consider the edge case when the input has a strike at the 10th frame',()=>{
+        const result = getBowlingScore([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10])
+        expect(result).toBe(30)
+    })
+
+    it('Should consider the edge case when the input has a strike at the 10th frame',()=>{
+        const result = getBowlingScore([10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10])
+        expect(result).toBe(300)
+    })
 })
+
