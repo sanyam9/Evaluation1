@@ -1,4 +1,4 @@
-const getBowlingScore = require('./getBowlingScore')
+const getBowlingScore = require('./bowlingGameScoreCalculator')
 
 describe('Bowling Game Score Calculator', ()=>{
     it('Should throw an error when the input array has less than 20 elements', ()=>{
