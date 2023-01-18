@@ -17,8 +17,9 @@ function getBowlingScore(rolls){
         if(frameScore<10){
             finalScore += frameScore
         }
-        
+        index+=2
     }
+    return finalScore
 }
-
+//console.log(getBowlingScore([3,6,3,6,3,6,3,6,3,6,3,6,3,6,3,6,3,6,3,6]))
 module.exports = getBowlingScore
