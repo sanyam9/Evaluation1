@@ -28,5 +28,5 @@ function getBowlingScore(rolls){
     }
     return finalScore
 }
-//console.log(getBowlingScore([3,6,3,6,3,6,3,6,3,6,3,6,3,6,3,6,3,6,3,6]))
+//console.log(getBowlingScore([6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
 module.exports = getBowlingScore
