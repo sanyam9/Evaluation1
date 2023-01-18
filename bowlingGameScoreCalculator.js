@@ -12,12 +12,19 @@ function getBowlingScore(rolls){
     let finalScore = 0
     let index = 0
     while(index<rolls.length-1){
-        let frameScore = rolls[index] + rolls[index+1]
+        if(rolls[index]===10){
+            finalScore += 10 + rolls[index+1] + rolls[index+2]
+        }
         
+        let frameScore = rolls[index] + rolls[index+1]
+        if(frameScore==10){
+            finalScore+= 10 + rolls[index+2]
+        }
         if(frameScore<10){
             finalScore += frameScore
         }
-        index+=2
+        
+        index +=2
     }
     return finalScore
 }
