@@ -18,7 +18,7 @@ describe('Bowling Game Score Calculator', ()=>{
         expect(result).toBe(90)
     })
     it('Should return final score when 10 frames are given as input (no strikes or spares)',()=>{
-        const result = getBowlingScore([[6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
+        const result = getBowlingScore([6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
         expect(result).toBe(16)
     })
 })
